@@ -1,11 +1,16 @@
-function App() {
- return(
-     <> 
-<form>
-   <input type="text" onChange= { (e)=> console.log("Changed Your Mind") } />
-</form>
+import {useState} from "react";
 
-     <button onClick={ ()=> console.log("Button was Clicked !")}>Click This Button</button>
+function App() {
+
+const[count, setCount] = useState(0);
+
+
+ return(
+     <>
+     <blockquote>
+     <button onClick={ ()=> setCount(count + 1) }>Increase Counter</button>
+     <p>{count}</p>
+     </blockquote>
      </>
  )
 
