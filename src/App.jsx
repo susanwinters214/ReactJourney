@@ -2,16 +2,16 @@ import {useState} from "react";
 
 function App() {
 
-const[count, setCount] = useState(0);
+const[toggle, setToggle] = useState(false);
 
 
  return(
-     <>
+
      <blockquote>
-     <button onClick={ ()=> setCount(count + 1) }>Increase Counter</button>
-     <p>{count}</p>
+     <button onClick={ ()=> setToggle(prevState => !prevState) }>Toggle STATE Off and On</button>
+     <p>{toggle ? 'ON' : "OFF"}</p>
      </blockquote>
-     </>
+    
  )
 
 }
